@@ -1,0 +1,77 @@
+.resources-container {
+    max-width: 800px;
+    /* Set a max width for better readability */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 20px;
+    /* Add padding for spacing */
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+}
+
+.disorder-card {
+    margin-bottom: 30px;
+    /* Space between each disorder card */
+    padding: 15px;
+    /* Padding inside each card */
+    background-color: #fff;
+    /* White background for cards */
+    border-radius: 8px;
+    /* Rounded corners for cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow for cards */
+}
+
+.disorder-title {
+    font-size: 1.8rem;
+    /* Larger font for titles */
+    color: #D9753B;
+    /* Your preferred color */
+    margin-bottom: 10px;
+    /* Space below the title */
+}
+
+.disorder-description {
+    font-size: 1rem;
+    /* Standard font size for descriptions */
+    color: #333;
+    /* Dark color for text */
+    line-height: 1.5;
+    /* Improved line spacing for readability */
+}
+
+.resources-heading {
+    font-size: 1.5rem;
+    /* Font size for resources heading */
+    color: #D9753B;
+    /* Your preferred color */
+    margin: 10px 0;
+    /* Margin above and below */
+}
+
+.resources-list {
+    list-style-type: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.resource-item {
+    font-size: 1rem;
+    /* Standard font size for resource items */
+    color: #555;
+    /* Dark gray color for resource items */
+    padding: 5px 0;
+    /* Space between resource items */
+    border-bottom: 1px solid #eee;
+    /* Divider line between items */
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+    /* Remove border for the last item */
+}

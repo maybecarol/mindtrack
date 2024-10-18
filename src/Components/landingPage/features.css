@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Features Section Styling */ 
+.features-section {
+    font-family: 'Poppins', sans-serif;
+    padding: 50px;
+    background-color: #F5D1A3;
+    text-align: center;
+}
+
+.features-title {
+    font-size: 50px;
+    margin: 30px 10px 30px 10px;
+    color: #261C14;
+}
+
+.features-description {
+    font-size: 24px;
+    margin-bottom: 40px;
+    /* Space below the description */
+    color: #261C14;
+}
+
+/* Features Grid (Container for Cards) */
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.feature-card {
+    background: linear-gradient(135deg, #F8E8D6, #F1D9B5);
+    border-radius: 15px;
+    padding: 30px;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
+  }
+
+/* Feature Title and Description */
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 10px;
+    color: #261C14;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .features-title {
+        font-size: 30px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .feature-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .features-grid {
+        gap: 20px;
+        padding: 0 10px;
+    }
+}

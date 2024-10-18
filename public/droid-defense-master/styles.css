@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "mcfont";
+    src: url("mcfont.ttf");
+}
+img {
+    display: none;
+}
+#bg-img{
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,184 @@
+body {
+    font-family: 'Arial', sans-serif; /* Changed font for a modern look */
+    background-color: #F5EFFF;
+    margin: 0;
+    padding: 50px;
+}
+
+.journal {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #CDC1FF;
+    padding: 30px; 
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
+
+.journal h1, 
+.journal h2 {
+    text-align: center;
+    color: #433878; 
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 12px; /* Increased padding for a better feel */
+    border-radius: 5px;
+    border: 1px solid #433878;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#jornal-diaryEntry {
+    width: 95%;
+    height: 250px;
+    padding: 12px; /* Increased padding for a better feel */
+    border-radius: 5px;
+    border: 1px solid #433878;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+#jornal-diaryEntry:focus {
+    border-color: #7062c0; 
+    outline: none; /* Remove default outline */
+}
+
+#journal-saveEntry {
+    margin: 0 auto;
+    display: block;
+    width: 60%; /* Increased button width */
+    padding: 12px;
+    background-color: #7062c0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    margin-bottom: 50px; 
+    margin-top: 10px; 
+    transition: background-color 0.3s;
+}
+
+#journal-saveEntry:hover {
+    background-color: #433878; 
+}
+
+#journal-entriesList {
+    list-style: none;
+    padding: 0;
+}
+
+#journal-entriesList li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px; /* Increased padding for list items */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+    transition: background-color 0.3s;
+}
+
+#journal-entriesList li:hover {
+    background-color: #e3e3e3; 
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.edit-button {
+    background-color: #6c757d; /* Grey color for edit button */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red color for delete button */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto; /* Automatically adjust width based on content */
+    max-width: 80%; /* Set a maximum width */
+    height: auto; /* Automatically adjust height based on content */
+    max-height: 80%; /* Set a maximum height to handle overflow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Add scroll if the content exceeds the max height */
+    word-wrap: break-word; /* Ensure long words break to fit */
+}
+
+.modal-content h2 {
+    margin: 0 0 10px 0;
+    color: #433878;
+    word-wrap: break-word; /* Ensure title wraps if too long */
+}
+
+.modal-content p {
+    margin: 0 0 20px 0;
+    color: #333;
+    word-wrap: break-word; /* Ensure paragraph text wraps */
+}
+
+/* Saved Entries */
+#journal-entriesList li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    max-width: 100%; /* Ensure entries do not exceed the width of their container */
+    word-wrap: break-word; /* Ensure text wraps within the entry */
+}
+
+.close-button {
+    background-color: #7062c0; /* Match with other buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #433878; /* Darken on hover */
+}

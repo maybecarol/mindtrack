@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Main container */
+.signup-and-how-it-works {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #F2EEEB;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Signup Form */
+.signup-form {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 50px;
+    /* Increased margin for better spacing */
+    background-color: #ffffff;
+    padding: 20px;
+    /* Increased padding for a more spacious feel */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.signup-form:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    /* Increased font size for the heading */
+    color: black;
+    /* Title color to match your theme */
+    text-align: center;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.signup-form input:focus {
+    border-color: #261c14;
+    outline: none;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #261c14;
+    /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: block;
+    /* Ensure the button behaves like a block element */
+    margin: 10px auto;
+    /* Center the button and add margin above and below */
+}
+
+.signup-form button:hover {
+    background-color: #1F1410;
+    /* Darker shade on hover */
+}
+
+.signup-form .error-message {
+    color: red;
+    margin-top: 0px;
+}
+
+.signup-form p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    flex: 2;
+    padding-left: 30px;
+    /* Maintain left padding */
+}
+
+.section-title {
+    font-size: 50px;
+    margin: 20px 0;
+    color: black;
+    text-align: left;
+}
+
+.how-it-works p {
+    font-size: 1.15rem;
+    color: #444;
+    margin: 12px 0;
+    line-height: 1.7;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .signup-and-how-it-works {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup-form {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .how-it-works {
+        padding-left: 0;
+        width: 100%;
+    }
+}

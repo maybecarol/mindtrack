@@ -1,0 +1,32 @@
+map, which has items
+player is a snake that moves along the grid
+
+Basic functionality
+    1) grid of 20x20
+    
+    2) snake is atleast 3 tiles long, on sequence completion it'll grow 
+    3) it travels along the gris to eat blocks. 
+        the color blocks must be eaten in the correct sequence
+        if eaten then playerTime++.
+    4) Implement a suitable scoring system
+    5) make it moblie responsive
+    6) implement onscreen direction control to steer the snake
+    7) implement leaderboard using localStorage
+    8) implement lives/heart system 
+    9) make the snake move faster as time progresses
+    10) implement pause 
+    11) sound effect on eating a thing
+    12) Implement power-ups that spawn randomly and gain buffs on eating them, 
+        such as shrinking the snake and slowing it down -> take hearts as cost
+    13) diffuctly increse:
+        1) snake is more faster with time
+        2) items spwan closer to snake
+    14) so the color blocks and letters should be combines, like blue A then red C 
+        sequence
+    15) save game
+    16) moving obstacles
+    17) add portal + portal powerup
+    18) make a progressbar timer and it slowly goes to a tunnell vison view of sorttsas time progresses
+
+have small tooltips like thing to show which block and color, the color can be gradient
+show that gradient progress in the background

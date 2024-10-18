@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.connect {
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #2A3C44; /* Calming deep blue-green */
+    padding: 40px;
+    color: #F7F7F7; /* Softer off-white */
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.connect h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #E0F2F1; /* Soft aqua tone */
+}
+
+.connect p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #C3D6D1; /* Muted pastel green */
+}
+
+.connect-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.connect-buttons button {
+    background-color: #7CB8A5; /* Warm mint green */
+    color: #2A3C44;
+    border: none;
+    margin: 20px 0px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.connect-buttons button:hover {
+    background-color: #669C87; /* Slightly darker green on hover */
+}

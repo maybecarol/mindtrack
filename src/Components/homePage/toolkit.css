@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #D9753B #f1f1f1;
+}
+
+
+.custom-scrollbar {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+
+.toolkit {
+  font-family: 'Poppins';
+  padding: 50px;
+  background-color: #F5D1A3;
+}
+
+.toolkit h1 {
+  font-size: 50px;
+  margin: 10px;
+  text-align: center;
+  color: #261C14;
+}
+
+.toolkit p {
+  font-size: 24px;
+  margin: 10px;
+  text-align: center;
+  color: #261C14;
+}
+
+.toolkit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toolkit .card {
+  background: linear-gradient(135deg, #F8E8D6, #F1D9B5);
+  /* Gradient from light cream to light beige */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  height: 200px;
+  width: 270px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Slightly stronger shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.toolkit .card:hover {
+  transform: translateY(-10px);
+  /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+}
+
+.toolkit .card h3 {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+.toolkit .links {
+  text-decoration: none;
+  color: black;
+}
+
+.toolkit .card p {
+  font-size: 1rem;
+  margin: 0px 0px 10px 0px;
+}
+
+.toolkit .card button {
+  background-color: #D9753B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: center;
+  /* Center the button horizontally */
+}
+
+.toolkit .card button:hover {
+  background-color: #B9642D;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  overflow-y: auto;
+  background-color: #F2E5DC;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  position: relative;
+  font-family: 'Poppins';
+  height: 70%;
+  width: 35%;
+  scrollbar-width: thin;
+  /* Thin scrollbar */
+  scrollbar-color: #D9753B #f1f1f1;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 2rem;
+}
+
+.options label {
+  margin-left: 8px;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result h2 {
+  margin-bottom: 10px;
+}
+
+.result p {
+  margin: 5px 0;
+}
+
+.error {
+  color: #ff4d4f; 
+  font-size: 12px; 
+  font-weight: bold;
+  margin-top: 5px; 
+  display: block; 
+}

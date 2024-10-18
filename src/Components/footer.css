@@ -1,0 +1,63 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin: 15px 0;
+}
+
+.social-media a {
+  display: inline-block; /* Ensure the links behave like buttons */
+  color: white; /* Default icon color */
+  margin: 0 15px;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  padding: 10px; /* Add padding for better click area */
+  border-radius: 50%; /* Make the background circular */
+}
+
+.social-media a:hover {
+  color: #333; /* Icon color on hover */
+  background-color: white; /* Background color on hover */
+}
+
+.footer-credit {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+
+  .footer-links li,
+  .social-media a {
+    display: block;
+    margin: 10px 0;
+  }
+}

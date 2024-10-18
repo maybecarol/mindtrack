@@ -1,0 +1,65 @@
+.music {
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    background-color: #F1EDE1;
+    padding: 20px;
+  }
+  
+  .music-image {
+    width: 40%;
+    margin-right: 20px;
+  }
+  
+  .music-image img {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+  }
+  
+  .music-content {
+    text-align: right;
+    max-width: 60%;
+  }
+  
+  .music h2 {
+    font-family: 'Mikela';
+    font-size: 48px;
+    margin: 10px 0px 10px 10px;
+    color: black;
+  }
+  
+  .music p {
+    font-size: 24px;
+    color: black;
+    margin: 5px 0px 5px;
+  }
+  
+  .music button {
+    background-color: #8C5230;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .music button:hover {
+    background-color: #59331D;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .music {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .music-image {
+      margin-bottom: 20px;
+    }
+  }
+  

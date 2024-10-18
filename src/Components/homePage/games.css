@@ -1,0 +1,119 @@
+/* General Styles for Games Section */
+.games {
+    font-family: 'Poppins';
+    background-color: #f2e5dc;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games-content {
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.games h2 {
+    font-family: 'Mikela';
+    font-size: 60px;
+    color: #591937;
+    margin: 10px 10px 10px 30px;
+}
+
+.games p {
+    font-size: 24px;
+    color: #ba6644;
+    margin: 10px 10px 10px 30px;
+}
+
+.games button {
+    background-color: #591937;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px 10px 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.games button:hover {
+    background-color: #3e1226;
+    transform: scale(1.05);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    /* Center the carousel */
+    align-items: center;
+    margin-left: auto;
+    /* Added for better centering */
+    margin-right: auto;
+    /* Added for better centering */
+    perspective: 1000px;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: translateZ(100px) scale(1);
+    z-index: 3;
+}
+
+.carousel-item.prev {
+    opacity: 0.7;
+    transform: translateX(-150px) scale(0.7);
+    z-index: 2;
+}
+
+.carousel-item.next {
+    opacity: 0.7;
+    transform: translateX(150px) scale(0.7);
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .games {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .games-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 300px;
+        height: 250px;
+    }
+
+    .carousel-item {
+        width: 150px;
+        height: 150px;
+    }
+}

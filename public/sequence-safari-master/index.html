@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="retro-effect" id="retro-effect"></div>
+    <div class="game">
+        <audio id="eat">
+            <source src="Assets/chomp.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio id="grow">
+            <source src="Assets/grow.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio id="damage">
+            <source src="Assets/damage.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio id="die">
+            <source src="Assets/die.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="top">
+            <div class="bar">
+                <div class="barObject" id="barObject"></div>
+            </div>
+            <div class="nav">
+                <span class="imgScoreContainer">
+                    <span id="score">score: 0</span>
+                </span>
+                <span id="lives"> lives: 0</span>
+                <span id="highScore">high score:0</span>
+            </div>
+            <div class="sequencePrompt" id="sequencePrompt">
+                <div class="prompt">A</div>
+                <div class="prompt">B</div>
+                <div class="prompt">C</div>
+                <div class="prompt">D</div>
+            </div>
+        </div>
+        <div class="playground" id="playground"></div>
+    </div>
+
+    <div class="buttons">
+        <img src='Assets/up.png' class='upBtnImage' id="upBtn"></img> <br />
+        <img src='Assets/left.png' class='leftBtnImage' id="leftBtn"></img>
+        <img src='Assets/right.png' class='rightBtnImage' id="rightBtn"></img>
+        <br />
+        <img src='Assets/down.png' class='downBtnImage' id="downBtn"></img>
+    </div>
+
+    <!-- for mobile debug -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script> -->
+
+    <script src="index.js" type="text/javascript"></script>
+
+
+
+</body>
+
+</html>

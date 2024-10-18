@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: "IntroScript";
+    src: url("Assets/Fonts/IntroScript/IntroScript/Non-commercial/TTF/IntroScript-Trial-Black.ttf") format("truetype");
+}
+
+html {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    box-sizing: inherit;
+    margin: inherit;
+    padding: inherit;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    image-rendering: pixelated;
+}
+
+.game {
+    z-index: 2;
+}
+
+.bar {
+    background-color: black;
+
+    width: 100%;
+    height: 1vh;
+}
+
+.barObject {
+
+    height: 1vh;
+    background-color: red;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Bebas Neue';
+    font-family: 'Press Start 2P';
+    font-size: x-large;
+}
+
+.sequencePrompt {
+
+    display: flex;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.playground {
+    width: 80vh;
+    height: 80vh;
+
+    margin: auto;
+    padding: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 10px;
+
+    width: 80vh;
+    height: 80vh;
+    background-color: #ffffff50;
+    backdrop-filter: blur(300px);
+
+    /* background-color: #ffffff30; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.playground-freeze {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.playground-damage {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #ff0000e0;
+}
+
+.square {
+    padding: none;
+    margin: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 1vh;
+    height: 1vh;
+}
+
+.snake {
+    background-color: #00ff00f0;
+    border: 2px transparent solid;
+}
+
+.head {
+    background-color: greenyellow;
+    content: "UwU";
+}
+
+.head,
+.tail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: 'Press Start 2P', Courier, monospace;
+}
+
+/* second snake */
+.snake2 {
+    background-color: #ff00f2f0;
+    border: 2px transparent solid;
+}
+
+.head2 {
+    background-color: #ff00f2f0;
+    content: "UwU";
+}
+
+.head2,
+.tail2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: 'Press Start 2P', Courier, monospace;
+}
+
+
+.block {
+    font-family: 'Press Start 2P';
+    font-weight: bolder;
+    border: 2px aliceblue solid;
+    color: #303030;
+    font-size: smaller;
+}
+
+.chooseDifficultyContainer {
+    display: flex;
+    color: white;
+
+    gap: 10%;
+
+    margin: 1%;
+    font-family: 'Press Start 2P', Courier, monospace;
+
+}
+
+.selectDropdown,
+opiton {
+    background-color: #101010;
+    color: white;
+    padding: 10px;
+    font-family: 'Press Start 2P', Courier, monospace;
+
+}
+
+.prompt {
+    background-color: yellow;
+    padding: 0.6vw;
+    font-size: larger;
+    border-radius: 6px;
+    margin: 1%;
+    font-family: 'Press Start 2P', Courier, monospace;
+
+    border: 2px solid black;
+
+    transition: background-color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+    transition: border 0.3s ease-out;
+}
+
+.prompt-done {
+    transition: background-color 0.3s ease-out;
+    transition: border 0.3s ease-out;
+    transition: color 0.3s ease-out;
+
+    background-color: white !important;
+    color: white;
+}
+
+.overlay {
+    backdrop-filter: blur(300px);
+}
+
+.modal {
+    z-index: 3;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.uiDev {
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5%;
+}
+
+.saveBtn {
+    height: 6vh;
+}
+
+.imgScoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalSelect {
+    width: 100%;
+    height: 4vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Press Start 2P';
+    color: white;
+}
+
+.modalSelectText {
+    font-weight: bolder;
+    font-size: larger;
+
+    /* animation: selectText 0.5s cubic-bezier(1, 0, 0, 1) infinite;
+    animation: cursorSelection 0.2s cubic-bezier(1, 0, 0, 1); */
+}
+
+@keyframes cursorSelection {
+    0% {
+        width: 0%;
+    }
+}
+
+@keyframes credits {
+    100% {
+        color: #171DA8;
+    }
+}
+
+@keyframes selectText {
+    0% {
+        color: #171DA8;
+        background-color: #ffffff;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+
+.dialogueLayout {
+    width: 85vh;
+    height: 75vh;
+    background-color: #171DA8;
+    border-radius: 10px;
+    border: 3px solid #30303080;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.savedLayout {
+    width: 85vh;
+    height: 75vh;
+    background-color: green;
+    border-radius: 10px;
+    border: 3px solid #30303080;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.paramsDiv {
+    display: flex;
+}
+
+.dialogueLayoutLost {
+    width: 85vh;
+    height: 75vh;
+    background-color: red;
+    border-radius: 10px;
+    border: 3px solid #30303080;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.youLostText {
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-shadow: 1px 3px green, -2px -3px red;
+
+    font-size: 3.5em;
+
+    margin: 10px;
+    padding: 3px;
+}
+
+.h1Lost {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-shadow: 1px 3px green, -2px -3px blue;
+
+    font-size: 3.5rem;
+
+    margin: 10px;
+    padding: 3px;
+}
+
+.pause {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* backdrop-filter: blur(30px); */
+    background: #171DA8f0;
+
+    overflow: hidden;
+    display: block;
+    animation: blueAnim 5ms infinite;
+}
+
+
+.pause-text,
+.pressP,
+.pressS,
+.savedText {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    font-size: 580%;
+
+    padding: 10px;
+    filter: blur(3px);
+    text-shadow: 1px 3px green, -2px -3px red;
+    animation: track 5ms infinite;
+
+}
+
+.pressS {
+    top: 20vh;
+    font-size: 150%;
+}
+
+.savedText {
+    top: 25vh;
+    font-size: 150%;
+    color: green;
+}
+
+.pause:after {
+    box-shadow: inset 0 0 10em rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 2;
+    content: "";
+}
+
+.screen-bottom {
+    position: absolute;
+    bottom: 0;
+
+    width: 100vw;
+    height: 3vh;
+    animation: appear 1s infinite,
+        flick 1s infinite,
+        big-jump 5ms infinite;
+
+}
+
+.pressP {
+    position: inherit;
+    top: 15vh;
+    font-size: 150%;
+}
+
+.white {
+    width: 100vw;
+    background: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 0.5vh;
+}
+
+.red {
+    width: 100vw;
+    background: red;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 0.5vh;
+}
+
+.green {
+    width: 100vw;
+    background: green;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 0.5vh;
+}
+
+.buttons {
+    z-index: 3;
+    text-align: center;
+
+    position: absolute;
+    bottom: 30vh;
+    left: 10vw;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+
+    width: fit-content;
+}
+
+
+
+.upBtnImage,
+.downBtnImage,
+.leftBtnImage,
+.rightBtnImage,
+.upBtn,
+.downBtn {
+    height: 9vh;
+    padding: 0;
+    margin: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.rightBtnImage {
+    margin-left: 3vw;
+}
+
+@keyframes buttonClicked {
+    58% {
+        filter: hue-rotate(90deg);
+    }
+}
+
+@keyframes track {
+
+    40% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: scale(1, 1);
+        transform: skew(0, 0);
+    }
+
+    41% {
+        opacity: 0.8;
+        top: 0px;
+        left: -100px;
+        transform: scale(1, 1.2);
+        transform: skew(50deg, 0);
+    }
+
+    42% {
+        opacity: 0.8;
+        top: 0px;
+        left: 100px;
+        transform: scale(1, 1.2);
+        transform: skew(-80deg, 0);
+    }
+
+    43% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: scale(1, 1);
+        transform: skew(0, 0);
+    }
+}
+
+@keyframes blueAnim {
+    28% {
+        background: #171DA8f0;
+    }
+
+    30% {
+        background: #171DA8ff;
+    }
+
+    33% {
+        background: #171DA8f0;
+    }
+
+    34% {
+        background: #171DA8ff;
+    }
+
+    35% {
+        background: #171DA8f0;
+    }
+}
+
+@keyframes flick {
+    50% {
+        left: 2px;
+    }
+
+    51% {
+        left: 0;
+    }
+}
+
+
+
+@keyframes appear {
+    0% {
+        filter: blur(5px);
+        opacity: 0.85;
+    }
+
+    50% {
+        filter: blur(3px);
+        opacity: 0.85;
+    }
+
+    100% {
+        filter: blur(4px);
+        opacity: 0.85;
+    }
+}
+
+@keyframes big-jump {
+    0% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: 70vh;
+    }
+
+    12% {
+        bottom: 50vh;
+    }
+
+    54% {
+        bottom: 20vh;
+    }
+
+    55% {
+        bottom: 90vh;
+    }
+
+    56% {
+        bottom: 10vh;
+    }
+
+    86% {
+        bottom: 0;
+    }
+
+    87% {
+        bottom: -600vh;
+    }
+
+    88% {
+        bottom: 0;
+    }
+}
+
+@media screen and (width <=80vh) and (width >=30vh) {
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #lives,#highScore,#score{
+        font-size: 0.45em;
+        padding: 6px;
+    }
+    .top{
+        width: 100%;
+        overflow: scroll;
+    }
+    .playground {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    .buttons {
+        bottom: 0;
+    }
+
+    br {
+        display: none;
+    }
+
+    .upBtnImage,
+    .downBtnImage,
+    .leftBtnImage,
+    .rightBtnImage,
+    .upBtn,
+    .downBtn {
+        height: 9vh;
+        padding: 0;
+        margin: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .top {
+        height: 8vh;
+    }
+
+    .sequencePrompt {
+        margin-top: 8vh;
+    }
+
+    .prompt {
+        padding: 10px;
+    }
+
+    .modal,
+    .pause {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pause {
+        font-size: 65%;
+    }
+
+    .dialogueLayout,
+    .dialogueLayoutLost {
+        width: 85%;
+        height: 85%;
+
+    }
+
+    h1,
+    .h1Lost {
+        font-size: 165%;
+    }
+
+    .youLostText {
+        font-size: 230%;
+    }
+
+    .modalSelect {
+        margin-top: 30%;
+    }
+
+    .dialogueLayout{
+        justify-content: flex-start;
+        gap:3px;
+    }
+    .modalSelect{
+        padding: 5px;
+        margin: 20px;
+    }
+
+
+    .chooseDifficultyContainer {
+        max-width: 80vw;
+
+        font-size:0.8em;
+    }
+
+    option,select{
+        max-width: 30vw;
+        font-size: 0.7em;
+
+        flex-grow: 0;
+    }
+
+}
