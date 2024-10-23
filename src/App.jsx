@@ -8,6 +8,7 @@ import Home from './Components/homePage/home'; // Import the User Profile compon
 import Footer from './components/footer';
 import Games from './components/gamesSection/games';
 import Journal from './Components/journalSection/journal';
+import JitsiMeetComponent from "./Components/JitsiMeetComponent";
 import axios from "axios";
 import "./App.css";
 
@@ -230,6 +231,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/games" element={<Games />} />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/meet" element={<JitsiMeetComponent />} /> 
         </Routes>
       </Router>
       <div className="App">
